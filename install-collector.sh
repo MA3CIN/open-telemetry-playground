@@ -1,0 +1,1 @@
+for FILE in K8s/*; do kubectl apply $FILE; done
