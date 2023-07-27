@@ -6,6 +6,8 @@ import (
 	"net/http"
 	"time"
 
+	networkC "go-server/networkController"
+
 	"go.uber.org/zap"
 )
 
@@ -26,6 +28,8 @@ func (s *Server) getRandom(w http.ResponseWriter, _ *http.Request) {
 	time.Sleep(time.Duration(sleepTime))
 	logger.Info("getRandom called", zap.Int("randomized number", n))
 	fmt.Fprintf(w, "%v", n)
+	address := "http://localhost:3000"
+	networkC.GetFromAddress(address)
 }
 
 var logger *zap.Logger
