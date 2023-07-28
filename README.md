@@ -16,4 +16,6 @@ K8s-open-telemetry contains all yaml files to setup the collector with automatic
 
 go-server contains a go application with an HTTP server.
 
+node-server is a js based http server.
+
 probe-example is an experiment conducted with kubeshark, to see from where the probes originate from.
