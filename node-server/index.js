@@ -6,7 +6,7 @@ import getFromAddress from "./networkController"
 const PORT = 3000;
 
 const app = express();
-app.get("/", (req: Request, res: Response) => {
+app.get("/", (req, res) => {
   new Promise(r => setTimeout(r, 1000));
   res.send("Request processed!");
 });
