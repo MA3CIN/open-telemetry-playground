@@ -1,2 +1,2 @@
-helm repo add gradiant-openverso https://gradiant.github.io/openverso-charts/
-helm install my-open5gs gradiant-openverso/open5gs
+helm repo add towards5gs 'https://raw.githubusercontent.com/Orange-OpenSource/towards5gs-helm/main/repo/'
+helm install free5gc-v1 towards5gs/free5gc
