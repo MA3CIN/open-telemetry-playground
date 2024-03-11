@@ -5,4 +5,8 @@ presets:
 config:
   receivers:
     filelog:
-      include: [/var/log/pods/*/*/open5gs*.log]
+      include: [/var/log/pods/*/*/*.log]
+
+
+
+      # include: [/var/log/pods/*/*/open5gs*.log]
