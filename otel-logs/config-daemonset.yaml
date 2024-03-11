@@ -6,7 +6,9 @@ config:
   receivers:
     filelog:
       include: [/var/log/pods/*/*/*.log]
+    # exclude:
+    # Exclude logs from all containers named otel-collector and from kube-system
+    # - /var/log/pods/*/otel-collector/*.log
+    # - /var/log/pods/*/kube*/*.log
 
-
-
-      # include: [/var/log/pods/*/*/open5gs*.log]
+    # include: [/var/log/pods/*/*/open5gs*.log]
