@@ -1,0 +1,4 @@
+mode: daemonset
+presets:
+  logsCollection:
+    enabled: true
