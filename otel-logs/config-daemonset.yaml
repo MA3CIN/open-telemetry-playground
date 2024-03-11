@@ -2,3 +2,7 @@ mode: daemonset
 presets:
   logsCollection:
     enabled: true
+config:
+  receivers:
+    filelog:
+      include: [/var/log/pods/*/*/open5gs*.log]
