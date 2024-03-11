@@ -1,2 +1,1 @@
-helm repo add gradiant-openverso https://gradiant.github.io/openverso-charts/
-helm install my-open5gs gradiant-openverso/open5gs
+helm install open5gs oci://registry-1.docker.io/gradiant/open5gs --version 2.2.0
