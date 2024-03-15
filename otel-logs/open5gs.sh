@@ -1,0 +1,1 @@
+helm install open5gs oci://registry-1.docker.io/gradiant/open5gs --version 2.2.0
