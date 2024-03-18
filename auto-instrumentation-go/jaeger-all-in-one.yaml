@@ -1,3 +1,4 @@
+# jaeger.yml
 apiVersion: v1
 kind: Service
 metadata:
@@ -54,7 +55,6 @@ template:
       component: otel-collector
   spec:
     containers:
-    # 1.47 is up and ready
       - image: jaegertracing/all-in-one:1.35
         name: jaeger
         ports:
