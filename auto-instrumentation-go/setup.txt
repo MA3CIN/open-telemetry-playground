@@ -5,3 +5,8 @@ helm repo add open-telemetry https://open-telemetry.github.io/opentelemetry-helm
 # kubectl apply -f https://github.com/cert-manager/cert-manager/releases/download/v1.14.4/cert-manager.yaml
 helm install  --set admissionWebhooks.certManager.enabled=false --set admissionWebhooks.certManager.autoGenerateCert=true --set manager.featureGates=operator.autoinstrumentation.go \
   opentelemetry-operator open-telemetry/opentelemetry-operator
+
+
+#JAEGER:
+kubectl create namespace observability # <1>
+kubectl create -f https://github.com/jaegertracing/jaeger-operator/releases/download/v1.55.0/jaeger-operator.yaml -n observability # <2>
