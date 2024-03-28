@@ -1,2 +1,9 @@
+spec.template.metadata.annotations
+
+instrumentation.opentelemetry.io/inject-go: 'true'
+instrumentation.opentelemetry.io/otel-go-auto-target-exe: './amf'
+
+
+
 instrumentation.opentelemetry.io/inject-go: 'true'
 instrumentation.opentelemetry.io/otel-go-auto-target-exe: '/path/to/container/executable'
