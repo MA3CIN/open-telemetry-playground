@@ -5,7 +5,7 @@ metadata:
   labels:
     app: stats-deploy
 spec:
-  replicas: 3
+  replicas: 1
   selector:
     matchLabels:
       app: stats-deploy
@@ -19,7 +19,7 @@ spec:
     spec:
       containers:
         - name: stats
-          image: marcinziolkowski/go-auto-dice
+          image: docker.io/marcinziolkowski/go-auto-dice:1
           ports:
             - containerPort: 80
 ---
