@@ -33,8 +33,6 @@ spec:
     app: jaeger
 
 ---
-
----
 apiVersion: v1
 kind: Service
 metadata:
