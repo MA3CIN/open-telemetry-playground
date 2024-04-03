@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: statistics-service-deployment
+  labels:
+    app: stats-deploy
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: stats-deploy
+  template:
+    metadata:
+      annotations:
+        instrumentation.opentelemetry.io/inject-go: "true"
+        instrumentation.opentelemetry.io/otel-go-auto-target-exe: "/app/main"
+      labels:
+        app: stats-deploy
+    spec:
+      containers:
+        - name: stats
+          image: marcinziolkowski/go-auto-dice
+          ports:
+            - containerPort: 80
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: stats-service
+spec:
+  selector:
+    app: stats-deploy
+  ports:
+    - protocol: TCP
+      port: 8080
+      targetPort: 80

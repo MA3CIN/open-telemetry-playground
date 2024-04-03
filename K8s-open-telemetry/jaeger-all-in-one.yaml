@@ -54,8 +54,8 @@ template:
       component: otel-collector
   spec:
     containers:
-    # 1.47 is up and ready
-      - image: jaegertracing/all-in-one:1.35
+      # 1.47 is up and ready
+      - image: jaegertracing/all-in-one:latest
         name: jaeger
         ports:
           - containerPort: 16686
