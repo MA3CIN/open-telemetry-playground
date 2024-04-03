@@ -19,7 +19,7 @@ spec:
     spec:
       containers:
         - name: stats
-          image: docker.io/marcinziolkowski/go-auto-dice:2
+          image: docker.io/marcinziolkowski/go-auto-dice:3
           ports:
             - containerPort: 80
 ---
