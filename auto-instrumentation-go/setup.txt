@@ -10,6 +10,15 @@ helm install  --set admissionWebhooks.certManager.enabled=false  --set manager.f
   opentelemetry-operator open-telemetry/opentelemetry-operator
 
 
-#JAEGER:
-kubectl create namespace observability # <1>
-kubectl create -f https://github.com/jaegertracing/jaeger-operator/releases/download/v1.55.0/jaeger-operator.yaml -n observability # <2>
+#JAEGER: # w 
+kubectl apply -f jaeger-all-in-one.yaml
+# kubectl create namespace observability # <1>
+# kubectl create -f https://github.com/jaegertracing/jaeger-operator/releases/download/v1.55.0/jaeger-operator.yaml -n observability # <2>
+
+
+#Free5GC prerequisite -> multus + gtp5g\
+kubectl apply -f https://raw.githubusercontent.com/k8snetworkplumbingwg/multus-cni/master/deployments/multus-daemonset-thick.yml
+
+
+
+# Free5GC fork with annotations:
