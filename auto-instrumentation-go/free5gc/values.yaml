@@ -87,7 +87,7 @@ global:
     excludeIP: 10.100.50.230
 
 # These parameters can be used to enable/disable deployment of subcharts
-deployMongoDb: false
+deployMongoDb: true
 deployAmf: true
 deployAusf: true
 deployN3iwf: false
