@@ -13,7 +13,7 @@ spec:
   local:
     path: /home/vagrant/kubedata
   nodeAffinity:
-    requiredDuringSchedulingIgnoredDuringExecution:
+    required:
       nodeSelectorTerms:
         - matchExpressions:
             - key: name
