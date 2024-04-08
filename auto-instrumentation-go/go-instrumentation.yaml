@@ -1,10 +1,10 @@
 apiVersion: opentelemetry.io/v1alpha1
 kind: Instrumentation
 metadata:
-  name: demo-instrumentation
+  name: go-instrumentation
 spec:
   exporter:
-    endpoint: http://demo-collector:4318
+    endpoint: http://jaeger:4318
   propagators:
     - tracecontext
     - baggage

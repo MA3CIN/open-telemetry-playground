@@ -21,4 +21,7 @@ kubectl apply -f https://raw.githubusercontent.com/k8snetworkplumbingwg/multus-c
 
 
 
+#Free5GC from local file:
+
+
 # Free5GC fork with annotations:
