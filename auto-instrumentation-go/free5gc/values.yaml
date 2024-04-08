@@ -16,7 +16,7 @@
 
 global:
   name: free5gc
-  userPlaneArchitecture: single  # possible values are "single" and "ulcl"
+  userPlaneArchitecture: single # possible values are "single" and "ulcl"
   nrf:
     service:
       name: nrf-nnrf
@@ -26,7 +26,7 @@ global:
   sbi:
     scheme: http
   amf:
-    n2if:  # NGAP
+    n2if: # NGAP
       ipAddress: 10.100.50.249
     service:
       ngap:
@@ -44,7 +44,7 @@ global:
     enabled: true
     name: n2network
     type: ipvlan
-    masterIf: ens3
+    masterIf: eno8303
     subnetIP: 10.100.50.248
     cidr: 29
     gatewayIP: 10.100.50.254
@@ -53,7 +53,7 @@ global:
     enabled: true
     name: n3network
     type: ipvlan
-    masterIf: ens3
+    masterIf: eno8303
     subnetIP: 10.100.50.232
     cidr: 29
     gatewayIP: 10.100.50.238
@@ -62,7 +62,7 @@ global:
     enabled: true
     name: n4network
     type: ipvlan
-    masterIf: ens3
+    masterIf: eno8303
     subnetIP: 10.100.50.240
     cidr: 29
     gatewayIP: 10.100.50.246
@@ -71,7 +71,7 @@ global:
     enabled: true
     name: n6network
     type: ipvlan
-    masterIf: ens3    # tu wszystko zmieniam na ens3 jesli OpenStack???
+    masterIf: eno8303 # tu wszystko zmieniam na ens3 jesli OpenStack???
     subnetIP: 10.100.100.0
     cidr: 24
     gatewayIP: 10.100.100.1
@@ -80,12 +80,11 @@ global:
     enabled: true
     name: n9network
     type: ipvlan
-    masterIf: ens3
+    masterIf: eno8303
     subnetIP: 10.100.50.224
     cidr: 29
     gatewayIP: 10.100.50.230
     excludeIP: 10.100.50.230
-
 
 # These parameters can be used to enable/disable deployment of subcharts
 deployMongoDb: true
