@@ -112,6 +112,7 @@ mongodb:
   useStatefulSet: true
   auth:
     enabled: false
+  affinity: {}
   persistence:
     size: 6Gi
     mountPath: /bitnami/mongodb/data/db/
