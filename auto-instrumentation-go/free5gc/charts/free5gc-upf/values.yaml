@@ -14,12 +14,11 @@
 # This is a YAML-formatted file.
 # Declare variables to be passed into your templates.
 
-
 global:
   projectName: free5gc
-  userPlaneArchitecture: single  # possible values are "single" and "ulcl"
+  userPlaneArchitecture: single # possible values are "single" and "ulcl"
   uesubnet: 10.1.0.0/16
-#Global network parametes
+  #Global network parametes
   n4network:
     enabled: true
     name: n4network
@@ -71,14 +70,15 @@ upf:
     mount: /free5gc/config/
 
   # network paramters
-  n3if:  # GTP-U
+  n3if: # GTP-U
     ipAddress: 10.100.50.233
-  n4if:  # PFCP
+  n4if: # PFCP
     ipAddress: 10.100.50.241
-  n6if:  # DN
+  n6if: # DN
     ipAddress: 10.100.100.12
 
-  podAnnotations: {}
+  podAnnotations:
+    {}
     # additional annotations
   imagePullSecrets: []
   podSecurityContext: {}
@@ -93,7 +93,7 @@ upf:
     initialDelaySeconds: 0
     periodSeconds: 1
     timeoutSeconds: 1
-    failureThreshold:  40
+    failureThreshold: 40
     successThreshold: 1
   livenessProbe:
     initialDelaySeconds: 120
@@ -136,14 +136,15 @@ upf1:
     mount: /free5gc/config/
 
   # network paramters
-  n9if:  # GTP-U
+  n9if: # GTP-U
     ipAddress: 10.100.50.226
-  n4if:  # PFCP
+  n4if: # PFCP
     ipAddress: 10.100.50.242
-  n6if:  # DN
+  n6if: # DN
     ipAddress: 10.100.100.13
 
-  podAnnotations: {}
+  podAnnotations:
+    {}
     # additional annotations
   imagePullSecrets: []
   podSecurityContext: {}
@@ -158,7 +159,7 @@ upf1:
     initialDelaySeconds: 0
     periodSeconds: 1
     timeoutSeconds: 1
-    failureThreshold:  40
+    failureThreshold: 40
     successThreshold: 1
   livenessProbe:
     initialDelaySeconds: 120
@@ -200,14 +201,15 @@ upf2:
     mount: /free5gc/config/
 
   # network paramters
-  n9if:  # GTP-U
+  n9if: # GTP-U
     ipAddress: 10.100.50.227
-  n4if:  # PFCP
+  n4if: # PFCP
     ipAddress: 10.100.50.243
-  n6if:  # DN
-    ipAddress: 10.100.100.14
+  n6if: # DN
+    ipAddress: 10.1.16.109
 
-  podAnnotations: {}
+  podAnnotations:
+    {}
     # additional annotations
   imagePullSecrets: []
   podSecurityContext: {}
@@ -222,7 +224,7 @@ upf2:
     initialDelaySeconds: 0
     periodSeconds: 1
     timeoutSeconds: 1
-    failureThreshold:  40
+    failureThreshold: 40
     successThreshold: 1
   livenessProbe:
     initialDelaySeconds: 120
@@ -264,16 +266,17 @@ upfb:
     mount: /free5gc/config/
 
   # network paramters
-  n3if:  # GTP-U
+  n3if: # GTP-U
     ipAddress: 10.100.50.233
-  n9if:  # GTP-U
+  n9if: # GTP-U
     ipAddress: 10.100.50.225
-  n4if:  # PFCP
+  n4if: # PFCP
     ipAddress: 10.100.50.241
-  n6if:  # DN
+  n6if: # DN
     ipAddress: 10.100.100.12
 
-  podAnnotations: {}
+  podAnnotations:
+    {}
     # additional annotations
   imagePullSecrets: []
   podSecurityContext: {}
@@ -288,7 +291,7 @@ upfb:
     initialDelaySeconds: 0
     periodSeconds: 1
     timeoutSeconds: 1
-    failureThreshold:  40
+    failureThreshold: 40
     successThreshold: 1
   livenessProbe:
     initialDelaySeconds: 120
