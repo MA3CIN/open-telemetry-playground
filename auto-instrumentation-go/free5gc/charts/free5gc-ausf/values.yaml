@@ -49,7 +49,7 @@ ausf:
   volume:
     mount: /free5gc/config/
   podAnnotations: {instrumentation.opentelemetry.io/inject-go: 'true', 
-instrumentation.opentelemetry.io/otel-go-auto-target-exe: './ausf'}
+instrumentation.opentelemetry.io/otel-go-auto-target-exe: '/free5gc/ausf/ausf'}
     # additional annotations
   imagePullSecrets: []
   podSecurityContext: {}

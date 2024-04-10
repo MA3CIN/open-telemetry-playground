@@ -79,7 +79,7 @@ upf:
 
   podAnnotations:
     {instrumentation.opentelemetry.io/inject-go: 'true',
-instrumentation.opentelemetry.io/otel-go-auto-target-exe: '/free5gc/upf'}
+instrumentation.opentelemetry.io/otel-go-auto-target-exe: '/free5gc/upf/upf'}
     # additional annotations
   imagePullSecrets: []
   podSecurityContext: {}

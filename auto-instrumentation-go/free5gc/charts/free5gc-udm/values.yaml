@@ -49,7 +49,7 @@ udm:
   volume:
     mount: /free5gc/config/
   podAnnotations: {instrumentation.opentelemetry.io/inject-go: 'true',
-instrumentation.opentelemetry.io/otel-go-auto-target-exe: '/free5gc/udm'}
+instrumentation.opentelemetry.io/otel-go-auto-target-exe: '/free5gc/udm/udm'}
     # additional annotations
   imagePullSecrets: []
   podSecurityContext: {}

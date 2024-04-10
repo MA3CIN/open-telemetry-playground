@@ -49,7 +49,7 @@ nssf:
   volume:
     mount: /free5gc/config/
   podAnnotations: {instrumentation.opentelemetry.io/inject-go: 'true',
-instrumentation.opentelemetry.io/otel-go-auto-target-exe: '/free5gc/nrf'}
+instrumentation.opentelemetry.io/otel-go-auto-target-exe: '/free5gc/nssf/nssf'}
     # additional annotations
   imagePullSecrets: []
   podSecurityContext: {}
