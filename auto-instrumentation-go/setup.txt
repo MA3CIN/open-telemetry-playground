@@ -16,13 +16,12 @@ kubectl apply -f jaeger-all-in-one.yaml
 # kubectl create -f https://github.com/jaegertracing/jaeger-operator/releases/download/v1.55.0/jaeger-operator.yaml -n observability # <2>
 
 # Flannel:
-helm repo add flannel https://flannel-io.github.io/flannel/
-helm install flannel --set podCidr="10.244.0.0/24" --namespace kube-flannel flannel/flannel
+kubectl apply -f https://github.com/flannel-io/flannel/releases/latest/download/kube-flannel.yml
 
 #Free5GC prerequisite -> PersistentVolume
 kubectl apply -f volume-mongo.yaml
 
-#Free5GC prerequisite -> multus + gtp5g\
+#Free5GC prerequisite -> multus + gtp5g\  OR THIN from multus cloned repo
 kubectl apply -f https://raw.githubusercontent.com/k8snetworkplumbingwg/multus-cni/master/deployments/multus-daemonset-thick.yml
 
 # Free5GC from helm repo
