@@ -15,11 +15,18 @@ kubectl apply -f jaeger-all-in-one.yaml
 # kubectl create namespace observability # <1>
 # kubectl create -f https://github.com/jaegertracing/jaeger-operator/releases/download/v1.55.0/jaeger-operator.yaml -n observability # <2>
 
+# Flannel:
+helm repo add flannel https://flannel-io.github.io/flannel/
+helm install flannel --set podCidr="10.244.0.0/24" --namespace kube-flannel flannel/flannel
+
+#Free5GC prerequisite -> PersistentVolume
+kubectl apply -f volume-mongo.yaml
 
 #Free5GC prerequisite -> multus + gtp5g\
 kubectl apply -f https://raw.githubusercontent.com/k8snetworkplumbingwg/multus-cni/master/deployments/multus-daemonset-thick.yml
 
-
+# Free5GC from helm repo
+helm install f5gc towards5gs/free5gc
 
 #Free5GC from local file:
 helm install f5gc-otel auto-instrumentation-go/free5gc/
