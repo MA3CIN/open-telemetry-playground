@@ -56,7 +56,8 @@ pcf:
     port: 80
   volume:
     mount: /free5gc/config/
-  podAnnotations: {}
+  podAnnotations: {instrumentation.opentelemetry.io/inject-go: 'true',
+instrumentation.opentelemetry.io/otel-go-auto-target-exe: '/free5gc/pcf'}
     # additional annotations
   imagePullSecrets: []
   podSecurityContext: {}

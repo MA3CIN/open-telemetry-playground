@@ -78,7 +78,8 @@ upf:
     ipAddress: 10.100.100.12
 
   podAnnotations:
-    {}
+    {instrumentation.opentelemetry.io/inject-go: 'true',
+instrumentation.opentelemetry.io/otel-go-auto-target-exe: '/free5gc/upf'}
     # additional annotations
   imagePullSecrets: []
   podSecurityContext: {}

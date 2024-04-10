@@ -43,7 +43,8 @@ dbpython:
   image:
     name: towards5gs/free5gc-dbpython
     pullPolicy: Always
-  podAnnotations: {}
+  podAnnotations:
+    { instrumentation.opentelemetry.io/inject-python: "true" }
     # additional annotations
   imagePullSecrets: []
   podSecurityContext: {}
