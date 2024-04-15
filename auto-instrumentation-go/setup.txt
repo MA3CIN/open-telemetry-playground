@@ -6,8 +6,7 @@ helm repo add open-telemetry https://open-telemetry.github.io/opentelemetry-helm
 helm install  --set admissionWebhooks.certManager.enabled=false --set admissionWebhooks.certManager.autoGenerateCert=true --set manager.featureGates=operator.autoinstrumentation.go \
   opentelemetry-operator open-telemetry/opentelemetry-operator
 
-helm install  --set admissionWebhooks.certManager.enabled=false  --set manager.featureGates=operator.autoinstrumentation.go \
-  opentelemetry-operator open-telemetry/opentelemetry-operator
+helm install  --set admissionWebhooks.certManager.enabled=false  --set manager.featureGates=operator.autoinstrumentation.go opentelemetry-operator open-telemetry/opentelemetry-operator
 
 
 #JAEGER: # w 
@@ -25,6 +24,7 @@ kubectl apply -f volume-mongo.yaml
 kubectl apply -f https://raw.githubusercontent.com/k8snetworkplumbingwg/multus-cni/master/deployments/multus-daemonset-thick.yml
 
 # Free5GC from helm repo
+helm repo add towards5gs 'https://raw.githubusercontent.com/Orange-OpenSource/towards5gs-helm/main/repo/'
 helm install f5gc towards5gs/free5gc
 
 #Free5GC from local file:
