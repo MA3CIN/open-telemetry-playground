@@ -20,10 +20,18 @@ kubectl apply -f https://github.com/flannel-io/flannel/releases/latest/download/
 #Free5GC prerequisite -> PersistentVolume
 kubectl apply -f volume-mongo.yaml
 
+# gtp5g
+sudo apt-get install build-essential -y
+git clone https://github.com/free5gc/gtp5g.git && cd gtp5g
+make clean && make
+sudo make install
+#sudo make uninstall
+
 #Free5GC prerequisite -> multus + gtp5g\  OR THIN from multus cloned repo
 kubectl apply -f https://raw.githubusercontent.com/k8snetworkplumbingwg/multus-cni/master/deployments/multus-daemonset-thick.yml
 
 # Free5GC from helm repo
+curl https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3 | bash
 helm repo add towards5gs 'https://raw.githubusercontent.com/Orange-OpenSource/towards5gs-helm/main/repo/'
 helm install f5gc towards5gs/free5gc
 
